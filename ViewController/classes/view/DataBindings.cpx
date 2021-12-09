@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.62.29" id="DataBindings" SeparateXMLFiles="false"
+             Package="view" ClientType="Generic">
+  <pageMap>
+    <page path="/view.jspx" usageId="view_viewPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_viewPageDef" path="view.pageDefs.viewPageDef"/>
+  </pageDefinitionUsages>
+</Application>
