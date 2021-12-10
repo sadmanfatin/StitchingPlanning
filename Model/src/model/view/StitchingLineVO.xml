@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="StitchingLineVO"
+  Version="11.1.1.62.29"
+  InheritPersonalization="true"
+  SelectList="StitchingLineEO.LINE_ID, 
+       StitchingLineEO.ORG_ID, 
+       StitchingLineEO.LINE_NUMBER, 
+       StitchingLineEO.LINE_NAME, 
+       StitchingLineEO.ROWID"
+  FromList="STITCHING_LINE StitchingLineEO"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="StitchingLineEO"
+    Entity="model.entity.StitchingLineEO"/>
+  <ViewAttribute
+    Name="LineId"
+    PrecisionRule="true"
+    EntityAttrName="LineId"
+    EntityUsage="StitchingLineEO"
+    AliasName="LINE_ID"/>
+  <ViewAttribute
+    Name="OrgId"
+    PrecisionRule="true"
+    EntityAttrName="OrgId"
+    EntityUsage="StitchingLineEO"
+    AliasName="ORG_ID"/>
+  <ViewAttribute
+    Name="LineNumber"
+    PrecisionRule="true"
+    EntityAttrName="LineNumber"
+    EntityUsage="StitchingLineEO"
+    AliasName="LINE_NUMBER"/>
+  <ViewAttribute
+    Name="LineName"
+    PrecisionRule="true"
+    EntityAttrName="LineName"
+    EntityUsage="StitchingLineEO"
+    AliasName="LINE_NAME"/>
+  <ViewAttribute
+    Name="RowID"
+    IsUpdateable="false"
+    PrecisionRule="true"
+    EntityAttrName="RowID"
+    EntityUsage="StitchingLineEO"
+    AliasName="ROWID"/>
+</ViewObject>
