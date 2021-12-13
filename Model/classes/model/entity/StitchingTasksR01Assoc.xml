@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="StitchingTasksR01Assoc"
+  Version="11.1.1.62.29"
+  InheritPersonalization="true">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="StitchingLineEO"
+    Cardinality="1"
+    Source="true"
+    Owner="model.entity.StitchingLineEO">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="StitchingLineEO"/>
+      <Attr Name="_foreignKey"
+        Value="model.entity.StitchingLineEO.StitchingLinePk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.StitchingLineEO.LineId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="StitchingTasksEO"
+    Cardinality="-1"
+    Owner="model.entity.StitchingTasksEO">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="StitchingTasksEO"/>
+      <Attr Name="_foreignKey"
+        Value="model.entity.StitchingTasksEO.StitchingTasksR01"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.StitchingTasksEO.LineId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

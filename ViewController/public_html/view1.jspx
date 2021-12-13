@@ -2,11 +2,56 @@
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
           xmlns:f="http://java.sun.com/jsf/core"
           xmlns:h="http://java.sun.com/jsf/html"
-          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <f:view>
     <af:document id="d1">
-      <af:form id="f1"></af:form>
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <dvt:schedulingGantt id="schedulingGantt1"
+                             value="#{bindings.StitchingLineVO1.schedulingGanttModel}"
+                             var="row" startTime="2021-12-13"
+                             endTime="2021-12-15">
+          <f:facet name="major">
+            <dvt:timeAxis scale="weeks" id="ta2"/>
+          </f:facet>
+          <f:facet name="minor">
+            <dvt:timeAxis scale="days" id="ta1"/>
+          </f:facet>
+          <f:facet name="nodeStamp">
+            <af:column sortProperty="LineId" sortable="false"
+                       headerText="#{bindings.StitchingLineVO1.hints.LineId.label}"
+                       id="c4">
+              <af:outputText value="#{row.LineId}" id="ot1">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.StitchingLineVO1.hints.LineId.format}"/>
+              </af:outputText>
+            </af:column>
+          </f:facet>
+          <af:column sortProperty="OrgId" sortable="false"
+                     headerText="#{bindings.StitchingLineVO1.hints.OrgId.label}"
+                     id="c2">
+            <af:outputText value="#{row.OrgId}" id="ot4">
+              <af:convertNumber groupingUsed="false"
+                                pattern="#{bindings.StitchingLineVO1.hints.OrgId.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column sortProperty="LineNumber" sortable="false"
+                     headerText="#{bindings.StitchingLineVO1.hints.LineNumber.label}"
+                     id="c1">
+            <af:outputText value="#{row.LineNumber}" id="ot3">
+              <af:convertNumber groupingUsed="false"
+                                pattern="#{bindings.StitchingLineVO1.hints.LineNumber.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column sortProperty="LineName" sortable="false"
+                     headerText="#{bindings.StitchingLineVO1.hints.LineName.label}"
+                     id="c3">
+            <af:outputText value="#{row.LineName}" id="ot2"/>
+          </af:column>
+        </dvt:schedulingGantt>
+      </af:form>
     </af:document>
   </f:view>
 </jsp:root>
